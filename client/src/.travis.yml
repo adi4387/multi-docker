@@ -17,6 +17,7 @@ after_success:
     - docker build -t adityakumarsingh88/multi_worker ./worker
 #Login to docker
     - echo $DOCKER_PASSWORD | docker login "$DOCKER_ID" --password-stdin
+#Pushing tags to docker
     - docker push adityakumarsingh88/multi_client
     - docker push adityakumarsingh88/multi_nginx
     - docker push adityakumarsingh88/multi_server
